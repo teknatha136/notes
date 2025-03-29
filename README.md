@@ -149,4 +149,10 @@ mkdir workspace
 ```
 
 
+# Add DNS record for vm.selise.dev
+
+```
+scp -r /Users/teknath/cst/letsencrypt root@104.248.145.177:/etc/nginx
+```
+
 
