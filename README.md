@@ -142,3 +142,11 @@ EOF
 sudo chmod +x /usr/local/bin/unique_id
 ```
 
+
+# Create a working directory
+```
+mkdir workspace
+```
+
+
+
