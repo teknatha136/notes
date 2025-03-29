@@ -49,8 +49,8 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
     }
     listen 443 ssl; # managed by Certbot
-    ssl_certificate /etc/letsencrypt/live/cst.selise.dev/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/cst.selise.dev/privkey.pem;
+    ssl_certificate /etc/nginx/letsencrypt/live/cst.selise.dev/fullchain.pem;
+    ssl_certificate_key /etc/nginx/letsencrypt/live/cst.selise.dev/privkey.pem;
     include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
     ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
 }
