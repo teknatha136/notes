@@ -33,6 +33,23 @@ sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
+### Change docker config
+```bash
+# Create Nginx configuration
+sudo tee /etc/docker/daemon.json > /dev/null << 'EOF'
+{
+  "default-address-pools": [
+    {
+      "base": "192.168.0.0/16",
+      "size": 24
+    }
+  ]
+}
+EOF
+```
+```
+systemctl restart docker
+```
 ### 3. Configure Nginx for Dynamic Proxying
 
 ```bash
